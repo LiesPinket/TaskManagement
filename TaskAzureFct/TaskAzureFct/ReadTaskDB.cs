@@ -1,15 +1,13 @@
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
-using System.Data.SqlClient;
-using System.Diagnostics;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Configuration;
+using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using WallyLookaLayout.Data;
 
 namespace TaskAzureFct
