@@ -21,7 +21,7 @@ namespace TaskAzureFct
 
             SqlConnection conn = new SqlConnection(constr);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Id, Name, Icon, Color FROM Category", conn);
+            SqlCommand cmd = new SqlCommand("SELECT Id, Name, Icon, Color FROM Categories", conn);
             SqlDataReader reader = cmd.ExecuteReader();
 
             List<Category> results = new List<Category>();
@@ -48,7 +48,7 @@ namespace TaskAzureFct
 
             SqlConnection conn = new SqlConnection(constr);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Name, Icon, Color FROM Category WHERE Id = @Id", conn);
+            SqlCommand cmd = new SqlCommand("SELECT Name, Icon, Color FROM Categories WHERE Id = @Id", conn);
             cmd.Parameters.Add(new SqlParameter("@Id", id));
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -79,7 +79,7 @@ namespace TaskAzureFct
 
             SqlConnection conn = new SqlConnection(constr);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Expense (CategoryId, Location, Amount, DateSpent) VALUES (@CategoryId, @Location, @Amount, @DateSpent)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Expenses (CategoryId, Location, Amount, DateSpent) VALUES (@CategoryId, @Location, @Amount, @DateSpent)", conn);
             cmd.Parameters.Add(new SqlParameter("@CategoryId", exp.Category.Id));
             cmd.Parameters.Add(new SqlParameter("@Location", exp.Location));
             cmd.Parameters.Add(new SqlParameter("@Amount", exp.Amount));
