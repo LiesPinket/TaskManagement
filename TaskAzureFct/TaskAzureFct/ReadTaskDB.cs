@@ -58,7 +58,7 @@ namespace TaskAzureFct
             {
                 result = new Category()
                 {
-                    Id = int.Parse(reader["Id"].ToString()),
+                    Id = id,
                     Name = reader["Name"].ToString(),
                     IconUrl = reader["Icon"].ToString(),
                     ColorHex = reader["Color"].ToString()
