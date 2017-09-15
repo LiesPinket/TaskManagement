@@ -72,8 +72,8 @@ namespace TaskAzureFct
             return req.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        [FunctionName("PostCategory")]
-        public static async Task<HttpResponseMessage> PostCategoryTask([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "categories")]HttpRequestMessage req, TraceWriter log)
+        [FunctionName("PostExpenseTask")]
+        public static async Task<HttpResponseMessage> PostExpenseTask([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "expenses")]HttpRequestMessage req, TraceWriter log)
         {
             string constr = System.Environment.GetEnvironmentVariable("SQLConnectionString", System.EnvironmentVariableTarget.Process);
             string json = await req.Content.ReadAsStringAsync();
