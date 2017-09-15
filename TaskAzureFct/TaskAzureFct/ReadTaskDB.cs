@@ -12,7 +12,7 @@ namespace TaskAzureFct
     {
         [FunctionName("ReadTask")]
         public static async Task<HttpResponseMessage> ReadTask([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "tasks/{id}")]HttpRequestMessage req, int id, TraceWriter log)
-        {
+        {//hello world
             log.Info("C# HTTP trigger function processed a request.");
 
             // parse query parameter
